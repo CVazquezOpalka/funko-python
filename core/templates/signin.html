@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+
+<section id="signin">
+  <div class="content">
+    <div class="title">
+      <h1>Iniciar Sesion</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio
+        exercitationem ex tenetur eos delectus a!
+      </p>
+    </div>
+    <div class="form_login">
+      <p>{{error}}</p>
+      <form method="POST">
+        {% csrf_token %} {{form.as_p}}
+        <input type="submit" value="enviar" />
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

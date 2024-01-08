@@ -1,0 +1,91 @@
+/* Pagina de contacto */
+#contacto_container {
+  width: 80%;
+  margin: 30px auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contacto {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.contacto .header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.contacto .header .img_box,
+.contacto .header .redes {
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contacto .header .img_box img {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to right, red, white);
+  border-radius: 50%;
+}
+.contacto .header .redes ul {
+  width: 80%;
+  margin: 0 auto;
+  list-style: none;
+}
+.contacto .header .redes ul li {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.contacto .header .redes ul li a {
+  width: 60%;
+  text-decoration: none;
+  color: gray;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacto .about {
+  width: 80%;
+  margin: 0 auto;
+}
+.contacto .about h1,
+.contacto .about h3,
+.contacto .about p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.contacto .about h3 span,
+.contacto .about h1 span {
+  color: gray;
+  font-weight: normal;
+}
+
+.contacto .about p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Pagina de Inicio */
+
+#landing {
+  width: 80%;
+  margin: 30px auto;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div id="contacto_container">
+  <div class="contacto">
+    <div class="header">
+      <div class="img_box">
+        <img src="{% static 'assets/vazquez.png' %}" alt="foto de contacto" />
+      </div>
+      <div class="redes">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/cristian-miguel-vazquez-opalka"
+              ><span>Linkedin</span
+              ><span
+                ><img width="30px"
+                  src="{% static 'assets/icons/linkedin.png' %}"
+                  alt="logo de linkedin" /></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/CVazquezOpalka"
+              ><span>Github</span
+              ><span
+                ><img width="30px"
+                  src="{% static 'assets/icons/github.png' %}"
+                  alt="logo de github" /></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://mypersonalwebsite-cv.netlify.app/"
+              ><span>Portafolios</span
+              ><span
+                ><img width="30px"
+                  src="{% static 'assets/icons/portafolio.png' %}"
+                  alt="portafolios" /></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="about">
+      <h1>Proyecto: <span>{{title}}</span></h1>
+      <h3>Creador: <span>{{creador}}</span></h3>
+      <p>
+        <strong>Descripcion del proyecto:</strong><br />Este proyecto fue creado
+        con el fin de aprender sobre microservcios.<br />
+        El mismo esta realizado con
+        <strong>Python Django, HTML, CSS y Javascript (JQUERY)</strong>.<br />
+        El proyecto cuenta con autenticacion de usuarios mediante python y su
+        orm, y ademas se incluyo una autenticacion por terceros utilizando una
+        libreria externa.<br />
+        El proyecto permite
+        <strong
+          >listar productos, ingresar en su descripcion, realizar una compra de
+          un o varios productos, tambien tiene incorporados una lista de
+          favoritos, identificados por usuarios</strong
+        >
+        ademas de un pequeño panel de ingreso de datos para realizar la
+        compra.<br />
+        En cuanto al panel de Administrador, el proyecto cuenta con borrado
+        logico cuando se realiza la compra de un producto, ademas de eso, cuenta
+        con un sistema integrado de claudinary, para que cuando se suban las
+        imagenes del producto sea a un servidor que no puede caerse.
+      </p>
+      <div class="icons">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/isotype.svg' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funko shop</title>
+    <!-- styles -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href='{% static "css/style.css" %}'
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/formularios.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/pages.css' %}"
+    />
+    <!-- jquery -->
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/jquery.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/jqueryui/jquery-ui.min.js' %}"
+    ></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{% static 'scripts/jqueryui/jquery-ui.min.css' %}"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{% static 'scripts/jqueryui/jquery-ui.structure.min.css' %}"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navigation">
+        <!-- Logo -->
+        <picture class="logo">
+          <a href="/"
+            ><img
+              src="{% static 'assets/branding/logo.svg' %}"
+              alt="logo de la pagina"
+          /></a>
+        </picture>
+        <!-- Navbar -->
+
+        <ul class="menu">
+          <li><a href="/shop">Catalogo</a></li>
+          <li><a href="/contact">contacto</a></li>
+
+          {% if user.is_authenticated %}
+          <li><a href="/signout">cerrar sesion</a></li>
+          {% else %}
+          <li><a href="/signin">ingresar</a></li>
+          {% endif %}
+
+          <li>
+            <a href="/checkout"
+              ><img
+                src="{% static 'assets/icons/cart-icon.svg' %}"
+                alt="icono de carrito"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--  <div id="banner">
+        <img src="{% static 'assets/banner.webp' %}" alt="banner">
+        <div class="shop">
+            <h2>Nuevos Ingresos</h2>
+            <p>Descubri el proximo Funko Pop de tu colección.</p>
+            <a href="">shop</a>
+        </div>
+    </div> -->
+    {% block content %} {% endblock %}
+
+    <footer>
+      <div class="items">
+        <ul class="menu-items">
+          <li><a href="/shop">Catalogo</a></li>
+
+          {% if user.is_authenticated %}
+          <li><a href="/micuenta">Mi cuenta</a></li>
+          {% else %}
+          <li><a href="/signup">Registrarse</a></li>
+          <li><a href="/signin">Iniciar Sesión</a></li>
+          {% endif %}
+
+          <li><a href="/contact">Contacto</a></li>
+        </ul>
+        <div class="logo">
+          <img src="{% static 'assets/branding/isotype.svg' %}" alt="" />
+        </div>
+      </div>
+      <div class="copy">
+        <p>all rights reserved 2022, Funkoshop &copy;</p>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/index.js' %}"
+    ></script>
+  </body>
+</html>

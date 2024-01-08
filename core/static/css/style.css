@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Header */
+
+#header {
+  width: 100%;
+  background-color: #30343f;
+  height: 80px;
+}
+#navigation {
+  width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-top: 7px;
+}
+#navigation .logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#navigation .menu {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+}
+#navigation .menu li a {
+  display: block;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#navigation .menu li a img {
+  width: 25px;
+}
+/* Banner */
+#banner {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+  overflow: hidden;
+  position: relative;
+}
+#banner .shop {
+  top: 70px;
+  left: 55px;
+  position: absolute;
+  z-index: 10;
+  width: 500px;
+  height: 150px;
+}
+#banner .shop h2 {
+  color: #fff;
+  font-size: 35px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+#banner .shop p {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#banner .shop a {
+  padding: 10px 30px;
+  background: #30343f;
+  color: #fff;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+#banner img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  animation: animation 10s forwards ease-in-out infinite;
+  z-index: -10;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 30px;
+  width: 100%;
+  height: 250px;
+  background-color: #30343f;
+}
+footer .items {
+  width: 85%;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .menu-items {
+  list-style: none;
+}
+footer .menu-items li a {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+footer .copy {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+/* index */
+
+@keyframes animation {
+  0% {
+    transform: translateY(-250px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-250px);
+  }
+}

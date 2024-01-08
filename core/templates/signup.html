@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+
+<section id="signup">
+  <div class="content">
+    <div class="title">
+      <h1>Registrate</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium,
+        consequuntur. Perspiciatis ex nesciunt distinctio aspernatur?
+      </p>
+    </div>
+    <div class="form_login">
+      <p>{{error}}</p>
+      <form method="POST">
+        {% csrf_token %} {{form.as_p}}
+        <input type="submit" value="Registrar" />
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
